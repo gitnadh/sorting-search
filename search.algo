@@ -1,0 +1,20 @@
+FUNCTION insertionSort(t:array) : array
+VAR
+    STEP,i,j:INTEGER;
+    temp:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO t.length-1 DO
+      FOR j FROM i TO 0 STEP -1  DO
+        IF (t[j-1]>t[j]) THEN
+            temp:=t[j];
+            t[j]:=t[j-1];
+            t[j-1]:=temp;
+        ELSE
+        break;
+            
+        END_IF
+      END_FOR
+      
+    END_FOR
+    RETURN t ;
+END
